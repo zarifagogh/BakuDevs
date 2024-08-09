@@ -1,0 +1,64 @@
+nav {
+    padding: 20px 0 40px 0;
+
+    .container {
+        .row {
+            justify-content: space-between;
+
+            .course {
+                p {
+                    font-family: Mulish;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 27.61px;
+                    padding-top: 2px;
+
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                    }
+                }
+            }
+
+            .favs {
+                margin-top: 5px;
+                gap: 5px;
+
+                svg {
+                    fill: $blue;
+                }
+
+                p {
+                    font-family: Mulish;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 20.08px;
+                    color: $blue;
+                }
+            }
+
+            .registr {
+                button {
+                    color: $blue;
+                    padding: 5px 10px;
+                    border: 1px solid $blue;
+                    border-radius: 20px;
+                    transition: 1s;
+
+                    &:hover {
+                        background-color: $blue;
+                        color: $white;
+
+                        svg {
+                            fill: $white;
+                        }
+                    }
+
+                    svg {
+                        fill: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <img src="./assets/photos/logo.svg" alt="" class="logo">
+                    <div class="course row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16 " id="dropDownButton">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                        <p><a href="">Kurslar</a></p>
+                    </div>
+                    <div class="favs row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-heart" viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                        </svg>
+                        <p>İstək siyahısı</p>
+                    </div>
+                    <div class="registr">
+                        <button class="login" onclick="showLogin()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                            </svg>
+                            Daxil ol
+                        </button>
+                        <button class="signup" onclick="showSignup()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                            Qeydiyyatdan keç
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="section-head">
+            <div class="container">
+                <div class="row">
+                    <div class="left  col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <h2><span>Proqramlaşdırmanı</span>
+                            onlayn olaraq
+                            bizdən öyrənin</h2>
+                        <button onclick="showCourses()"> Kurslar > </button>
+                    </div>
+                    <div class="right col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+
+                        <div class="dashed">
+                            <div class="circle">
+                                <img src="./assets/photos/girl.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="little blue"></div>
+                        <div class="little orange"></div>
+                        <div class="middle"></div>
+                        <div class="big"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="drop-down-page section" id="dropDownPage">
+        <div class="container">
+            <button id="closeButton">&#10006;</button>
+            <div class="row">
+                <div class="left">
+                    <ul>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                        <li>UI/UX</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="">HTML</a></li>
+                        <li><a href="">CSS</a></li>
+                        <li><a href="">Bootstrap</a></li>
+                        <li><a href="">Javascript</a></li>
+                        <li><a href="">JQuery</a></li>
+                        <li><a href="">React.JS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <section class="section-courses section">
+        <div class="container">
+            <div class="categories row">
+                <h2>Populyar kurslar</h2>
+                <div>
+                    <button class="filter-btn" data-filter="all">Hamısı</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="uiux">UI/UX</button>
+                </div>
+            </div>
+
+            <div class="courses row">
+                <div class="item" data-category="frontend">
+                    <img src="./assets/photos/JS.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Frontend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="backend">
+                    <img src="./assets/photos/phppng.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Backend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="uiux">
+                    <img src="./assets/photos/ux.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">UI/UX</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="backend">
+                    <img src="./assets/photos/backend.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Backend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="frontend">
+                    <img src="./assets/photos/html.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Frontend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="backend">
+                    <img src="./assets/photos/c.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Backend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="backend">
+                    <img src="./assets/photos/backend2.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">Backend</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+                <div class="item" data-category="uiux">
+                    <img src="./assets/photos/xd.png" alt="JavaScript">
+                    <div class="row justify-content-between captions">
+                        <div class="tag">UI/UX</div>
+                        <span class="duration"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>18 dərs</span>
+                    </div>
+                    <hr>
+                    <div class="details row">
+                        <h6>Lorem ipsum dolor sit amet</h6>
+                        <button class="play-btn">&#9658;</button>
+                    </div>
+                </div>
+            </div>
+            <button class="all" onclick="showCourses()">Bütün kurslar ></button>
+        </div>
+    </section>
+
+    <section class="section-info section">
+        <div class="container">
+            <div class="text">
+                <h2>BakuDevs ilə istədiyiniz biliklərə sahib olun!</h2>
+                <p>Nə üçün tədrisinizi məhz bizdə keçməlisiniz? Bunun üçün ən azı dörd səbəb var:</p>
+            </div>
+
+            <div class="inner row">
+                <div class="left row ">
+                    <div>
+                        <div class="card">
+                            <div class="svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-cash" viewBox="0 0 16 16">
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                    <path
+                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
+                                </svg>
+                            </div>
+                            <h2>
+                                Sərfəli qiymət
+                            </h2>
+                            <p>Ayda cəmi 10 AZN ödəniş etməklə saytdımızdaki bütün kurslar sizin üçün tam açıq olacaq!
+                            </p>
+                        </div>
+                        <div class="card">
+                            <div class="svg" style="background-color:rgba(100, 183, 244, 1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-file-earmark-play" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+                                    <path
+                                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                                </svg>
+                            </div>
+                            <h2>
+                                Video və Yazılı format
+                            </h2>
+                            <p>Bizim saytımızda siz dərslərə həm video formatında, həm də yazılı izah formatında rahat
+                                baxa bilərsiniz
+                            </p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <div class="card">
+                            <div class="svg" style="background: rgba(70, 171, 153, 1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-journal-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+                                    <path
+                                        d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                    <path
+                                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                                </svg>
+                            </div>
+                            <h2>
+                                Tapşırıqlar və Layihələr
+                            </h2>
+                            <p>Hər dərsin və kursun sonunda sizə tapşırıqlar və layihələr veriləcək. Siz onları yerinə
+                                yetirərək, praktik təcrübənizi artıracaqsınız və portfolionuzu yaratmış olacaqsınız
+                            </p>
+                        </div>
+                        <div class="card ">
+                            <div class="svg" style="background: rgba(255, 174, 1, 1);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-card-list" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                                    <path
+                                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                                </svg>
+                            </div>
+                            <h2>
+                                Sertifikat veririk
+                            </h2>
+                            <p>Siz bizim saytımızda hər hansı bir kursu bitirdikdən sonra, avtomatik olaraq BakuDevs
+                                sertifikatı əldə edəcəksiniz. Bu sertifikat sizin bilik və bacarıqlarınızı təsdiq edəcək
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div><img src="./assets/photos/boybg.png" alt="">
+
+                    </div>
+                    <!-- <img src="./assets/photos/boy.png" alt="" class="boy-img"> -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="left">
+                    <img src="./assets/photos/logowhite.svg" alt="BakuDevs Logo" class="footer-logo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="middle ">
+                    <ul>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                        <li>UI/UX</li>
+                    </ul>
+
+                </div>
+                <div class="middle ">
+                    <ul>
+                        <li><a href="index.html">Əsas səhifə</a></li>
+                        <li><a href="courses.html">Kurslar</a></li>
+                        <li><a href="about.html">Haqqımızda</a></li>
+                        <li><a href="contact.html">Əlaqə</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p>Yeniliklərdən xəbərdar olmaq üçün <br> <span><a href="signup.html">Qeydiyyatdan keçin.</a></span></p>
+                    <form class="subscribe-form row">
+                        <input type="email" placeholder="Email">
+                        <button type="submit">&#10140;</button>
+                    </form>
+                </div>
+            </div>
+            <div class="bottom row">
+                <p>© 2022 BakuDevs.net. Bütün hüquqlar qorunur</p>
+                <p>Site by JEDAi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
